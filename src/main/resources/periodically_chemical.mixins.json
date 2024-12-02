@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "net.c4fey.perichem.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"ExampleMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
