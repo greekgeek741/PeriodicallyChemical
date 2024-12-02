@@ -1,0 +1,29 @@
+{
+  "itemgroup.chemistry_tools": "Chemistry Tools",
+  "itemgroup.elements": "Chemical Elements",
+
+  "chemgroup.nonmetal": "Non-Metals",
+  "chemgroup.noble_gas": "Noble Gasses",
+  "chemgroup.alkali": "Alkali Metals",
+  "chemgroup.alkaline_earth": "Alkaline Earth Metals",
+  "chemgroup.semimetal": "Semimetals",
+  "chemgroup.halogen": "Halogens",
+  "chemgroup.transition": "Transition Metals",
+  "chemgroup.post_transition": "Post Transition Metals",
+  "chemgroup.lanthanide": "Lanthanide Metals",
+  "chemgroup.actinide": "Actinide Metals",
+
+  "item.periodically_chemical.glass_ampule": "Glass Ampule",
+  "item.periodically_chemical.glass_vial": "Glass Vial",
+
+  "item.periodically_chemical.h_ampule": "Hydrogen Ampule",
+  "item.periodically_chemical.he_ampule": "Helium Ampule",
+  "item.periodically_chemical.li_vial": "Lithium Vial",
+  "item.periodically_chemical.be_vial": "Beryllium Vial",
+  "item.periodically_chemical.b_vial": "Boron Vial",
+  "item.periodically_chemical.c_vial": "Carbon Vial",
+  "item.periodically_chemical.n_ampule": "Nitrogen Ampule",
+  "item.periodically_chemical.o_ampule": "Oxygen Ampule",
+  "item.periodically_chemical.f_ampule": "Fluorine Ampule",
+  "item.periodically_chemical.ne_ampule": "Neon Ampule"
+}

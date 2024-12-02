@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "periodically_chemical:item/ampule_liquid",
+    "layer1": "periodically_chemical:item/ampule"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "periodically_chemical:item/vial_powder",
+    "layer1": "periodically_chemical:item/vial"
+  }
+}
