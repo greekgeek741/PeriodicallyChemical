@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "periodically_chemical:glass_ampule_broken"
+    }
+  ],
+  "result": {
+    "id": "periodically_chemical:glass_ampule",
+    "count": 1
+  }
+}

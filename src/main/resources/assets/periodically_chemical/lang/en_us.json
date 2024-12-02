@@ -14,6 +14,7 @@
   "chemgroup.actinide": "Actinide Metals",
 
   "item.periodically_chemical.glass_ampule": "Glass Ampule",
+  "item.periodically_chemical.glass_ampule_broken": "Broken Glass Ampule",
   "item.periodically_chemical.glass_vial": "Glass Vial",
 
   "item.periodically_chemical.h_ampule": "Hydrogen Ampule",

@@ -27,6 +27,7 @@ public class PC_ItemGroups {
         Registry.register(Registries.ITEM_GROUP, CHEM_TOOLS_GROUP_KEY, CHEM_TOOLS_GROUP);
         ItemGroupEvents.modifyEntriesEvent(CHEM_TOOLS_GROUP_KEY).register(itemGroup -> {
             itemGroup.add(PC_Items.GLASS_AMPULE);
+            itemGroup.add(PC_Items.GLASS_AMPULE_BROKEN);
             itemGroup.add(PC_Items.GLASS_VIAL);
         });
         Registry.register(Registries.ITEM_GROUP, ELEMENTS_GROUP_KEY, ELEMENTS_GROUP);
@@ -42,5 +43,6 @@ public class PC_ItemGroups {
             itemGroup.add(PC_Items.F_AMPULE);
             itemGroup.add(PC_Items.NE_AMPULE);
         });
+        PeriodicallyChemical.LOGGER.info("Item Groups Registered!");
     }
 }

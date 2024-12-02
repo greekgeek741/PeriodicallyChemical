@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "p",
+    "g",
+    "g"
+  ],
+  "key": {
+    "p": {
+      "tag": "minecraft:planks"
+    },
+    "g": {
+      "item": "minecraft:glass"
+    }
+  },
+  "result": {
+    "id": "periodically_chemical:glass_vial",
+    "count": 6
+  }
+}

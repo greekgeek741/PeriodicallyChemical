@@ -11,6 +11,8 @@ import net.minecraft.util.Identifier;
 public class PC_Items {
 
     public static final Item GLASS_AMPULE = register(new Item(new Item.Settings()), "glass_ampule");
+    public static final Item GLASS_AMPULE_BROKEN = register(new Item(new Item.Settings()),
+            "glass_ampule_broken");
     public static final Item GLASS_VIAL = register(new Item(new Item.Settings()), "glass_vial");
     public static final Item H_AMPULE = register(new ElementItem(new Item.Settings(),
             "H", ChemGroup.NONMETAL, 0xffffffff), "h_ampule");
