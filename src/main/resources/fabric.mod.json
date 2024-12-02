@@ -3,9 +3,9 @@
 	"id": "periodically_chemical",
 	"version": "${version}",
 	"name": "Periodically Chemical",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A mod that adds chemistry to Minecraft.",
 	"authors": [
-		"Me!"
+		"C4Fey"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -38,7 +38,5 @@
 		"java": ">=21",
 		"fabric-api": "*"
 	},
-	"suggests": {
-		"another-mod": "*"
-	}
+	"suggests": {}
 }
