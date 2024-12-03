@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iii",
+    " p "
+  ],
+  "key": {
+    "p": {
+      "tag": "minecraft:planks"
+    },
+    "i": {
+      "tag": "c:ingots/iron"
+    }
+  },
+  "result": {
+    "id": "periodically_chemical:lab_table",
+    "count": 1
+  }
+}

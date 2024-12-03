@@ -13,6 +13,8 @@
   "chemgroup.lanthanide": "Lanthanide Metals",
   "chemgroup.actinide": "Actinide Metals",
 
+  "block.periodically_chemical.lab_table": "Lab Table",
+
   "item.periodically_chemical.glass_ampule": "Glass Ampule",
   "item.periodically_chemical.glass_ampule_broken": "Broken Glass Ampule",
   "item.periodically_chemical.glass_vial": "Glass Vial",

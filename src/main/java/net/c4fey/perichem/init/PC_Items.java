@@ -14,6 +14,7 @@ public class PC_Items {
     public static final Item GLASS_AMPULE_BROKEN = register(new Item(new Item.Settings()),
             "glass_ampule_broken");
     public static final Item GLASS_VIAL = register(new Item(new Item.Settings()), "glass_vial");
+
     public static final Item H_AMPULE = register(new ElementItem(new Item.Settings(),
             "H", ChemGroup.NONMETAL, 0xffffffff), "h_ampule");
     public static final Item HE_AMPULE = register(new ElementItem(new Item.Settings(),
@@ -35,7 +36,7 @@ public class PC_Items {
     public static final Item NE_AMPULE = register(new ElementItem(new Item.Settings(),
             "Ne", ChemGroup.NOBLE_GAS, 0xffffffff), "ne_ampule");
 
-    public static Item register(Item item, String id) {
+    private static Item register(Item item, String id) {
         return Registry.register(Registries.ITEM, Identifier.of(PeriodicallyChemical.MOD_ID, id), item);
     }
 

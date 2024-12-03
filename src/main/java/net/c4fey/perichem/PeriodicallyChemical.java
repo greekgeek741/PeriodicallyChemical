@@ -1,5 +1,6 @@
 package net.c4fey.perichem;
 
+import net.c4fey.perichem.init.PC_Blocks;
 import net.c4fey.perichem.init.PC_ItemGroups;
 import net.c4fey.perichem.init.PC_Items;
 import net.fabricmc.api.ModInitializer;
@@ -15,6 +16,7 @@ public class PeriodicallyChemical implements ModInitializer {
 	public void onInitialize() {
 		PC_Items.initialize();
 		PC_ItemGroups.initialize();
+		PC_Blocks.initialize();
 		LOGGER.info("Periodically Chemical has been initialised!");
 	}
 }

@@ -15,7 +15,7 @@ public class PC_ItemGroups {
     public static final RegistryKey<ItemGroup> CHEM_TOOLS_GROUP_KEY = RegistryKey.of(
             Registries.ITEM_GROUP.getKey(), Identifier.of(PeriodicallyChemical.MOD_ID, "chem_tools_group"));
     public static final ItemGroup CHEM_TOOLS_GROUP = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(PC_Items.GLASS_AMPULE))
+            .icon(() -> new ItemStack(PC_Blocks.LAB_TABLE))
             .displayName(Text.translatable("itemgroup.chemistry_tools")).build();
     public static final RegistryKey<ItemGroup> ELEMENTS_GROUP_KEY = RegistryKey.of(
             Registries.ITEM_GROUP.getKey(), Identifier.of(PeriodicallyChemical.MOD_ID, "elements_group"));
@@ -29,6 +29,7 @@ public class PC_ItemGroups {
             itemGroup.add(PC_Items.GLASS_AMPULE);
             itemGroup.add(PC_Items.GLASS_AMPULE_BROKEN);
             itemGroup.add(PC_Items.GLASS_VIAL);
+            itemGroup.add(PC_Blocks.LAB_TABLE);
         });
         Registry.register(Registries.ITEM_GROUP, ELEMENTS_GROUP_KEY, ELEMENTS_GROUP);
         ItemGroupEvents.modifyEntriesEvent(ELEMENTS_GROUP_KEY).register(itemGroup -> {
