@@ -18,6 +18,8 @@
   "item.periodically_chemical.glass_ampule": "Glass Ampule",
   "item.periodically_chemical.glass_ampule_broken": "Broken Glass Ampule",
   "item.periodically_chemical.glass_vial": "Glass Vial",
+  "item.periodically_chemical.glass_tank": "Glass Tank",
+  "item.periodically_chemical.glass_jug": "Glass Jug",
 
   "item.periodically_chemical.h_ampule": "Hydrogen Ampule",
   "item.periodically_chemical.he_ampule": "Helium Ampule",
@@ -28,5 +30,16 @@
   "item.periodically_chemical.n_ampule": "Nitrogen Ampule",
   "item.periodically_chemical.o_ampule": "Oxygen Ampule",
   "item.periodically_chemical.f_ampule": "Fluorine Ampule",
-  "item.periodically_chemical.ne_ampule": "Neon Ampule"
+  "item.periodically_chemical.ne_ampule": "Neon Ampule",
+
+  "item.periodically_chemical.h_tank": "Hydrogen Tank",
+  "item.periodically_chemical.he_tank": "Helium Tank",
+  "item.periodically_chemical.li_powder": "Lithium Powder",
+  "item.periodically_chemical.be_powder": "Beryllium Powder",
+  "item.periodically_chemical.b_powder": "Boron Powder",
+  "item.periodically_chemical.c_powder": "Carbon Powder",
+  "item.periodically_chemical.n_tank": "Nitrogen Tank",
+  "item.periodically_chemical.o_tank": "Oxygen Tank",
+  "item.periodically_chemical.f_tank": "Fluorine Tank",
+  "item.periodically_chemical.ne_tank": "Neon Tank"
 }

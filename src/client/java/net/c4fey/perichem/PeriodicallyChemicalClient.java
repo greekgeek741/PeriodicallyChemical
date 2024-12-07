@@ -21,6 +21,17 @@ public class PeriodicallyChemicalClient implements ClientModInitializer {
 				PC_Items.N_AMPULE,
 				PC_Items.O_AMPULE,
 				PC_Items.F_AMPULE,
-				PC_Items.NE_AMPULE);
+				PC_Items.NE_AMPULE,
+
+				PC_Items.H_TANK,
+				PC_Items.HE_TANK,
+				PC_Items.LI_POWDER,
+				PC_Items.BE_POWDER,
+				PC_Items.B_POWDER,
+				PC_Items.C_POWDER,
+				PC_Items.N_TANK,
+				PC_Items.O_TANK,
+				PC_Items.F_TANK,
+				PC_Items.NE_TANK);
 	}
 }

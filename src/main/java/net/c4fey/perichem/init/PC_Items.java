@@ -14,7 +14,10 @@ public class PC_Items {
     public static final Item GLASS_AMPULE_BROKEN = register(new Item(new Item.Settings()),
             "glass_ampule_broken");
     public static final Item GLASS_VIAL = register(new Item(new Item.Settings()), "glass_vial");
+    public static final Item GLASS_TANK = register(new Item(new Item.Settings()), "glass_tank");
+    public static final Item GLASS_JUG = register(new Item(new Item.Settings()), "glass_jug");
 
+    // BASIC ELEMENTS
     public static final Item H_AMPULE = register(new ElementItem(new Item.Settings(),
             "H", ChemGroup.NONMETAL, 0xffffffff), "h_ampule");
     public static final Item HE_AMPULE = register(new ElementItem(new Item.Settings(),
@@ -35,6 +38,28 @@ public class PC_Items {
             "F", ChemGroup.HALOGEN, 0xffdcffcc), "f_ampule");
     public static final Item NE_AMPULE = register(new ElementItem(new Item.Settings(),
             "Ne", ChemGroup.NOBLE_GAS, 0xffffffff), "ne_ampule");
+
+    // TANKS/JUGS/POWDER
+    public static final Item H_TANK = register(new ElementItem(new Item.Settings(),
+            "H", ChemGroup.NONMETAL, 0xffffffff), "h_tank");
+    public static final Item HE_TANK = register(new ElementItem(new Item.Settings(),
+            "He", ChemGroup.NOBLE_GAS, 0xffffffff), "he_tank");
+    public static final Item LI_POWDER = register(new ElementItem(new Item.Settings(),
+            "Li", ChemGroup.ALKALI, 0xffdadada), "li_powder");
+    public static final Item BE_POWDER = register(new ElementItem(new Item.Settings(),
+            "Be", ChemGroup.ALKALINE_EARTH, 0xff434448), "be_powder");
+    public static final Item B_POWDER = register(new ElementItem(new Item.Settings(),
+            "B", ChemGroup.SEMIMETAL, 0xff555143), "b_powder");
+    public static final Item C_POWDER = register(new ElementItem(new Item.Settings(),
+            "C", ChemGroup.NONMETAL, 0xff000000), "c_powder");
+    public static final Item N_TANK = register(new ElementItem(new Item.Settings(),
+            "N", ChemGroup.NONMETAL, 0xffffffff), "n_tank");
+    public static final Item O_TANK = register(new ElementItem(new Item.Settings(),
+            "O", ChemGroup.NONMETAL, 0xffffffff), "o_tank");
+    public static final Item F_TANK = register(new ElementItem(new Item.Settings(),
+            "F", ChemGroup.HALOGEN, 0xffdcffcc), "f_tank");
+    public static final Item NE_TANK = register(new ElementItem(new Item.Settings(),
+            "Ne", ChemGroup.NOBLE_GAS, 0xffffffff), "ne_tank");
 
     private static Item register(Item item, String id) {
         return Registry.register(Registries.ITEM, Identifier.of(PeriodicallyChemical.MOD_ID, id), item);

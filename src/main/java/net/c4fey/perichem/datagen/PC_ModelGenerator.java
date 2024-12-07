@@ -34,6 +34,17 @@ public class PC_ModelGenerator extends FabricModelProvider {
         itemModelGenerator.register(PC_Items.O_AMPULE, item("gas_ampule"));
         itemModelGenerator.register(PC_Items.F_AMPULE, item("gas_ampule"));
         itemModelGenerator.register(PC_Items.NE_AMPULE, item("gas_ampule"));
+
+        itemModelGenerator.register(PC_Items.H_TANK, item("gas_tank"));
+        itemModelGenerator.register(PC_Items.HE_TANK, item("gas_tank"));
+        itemModelGenerator.register(PC_Items.LI_POWDER, item("powder"));
+        itemModelGenerator.register(PC_Items.BE_POWDER, item("powder"));
+        itemModelGenerator.register(PC_Items.B_POWDER, item("powder"));
+        itemModelGenerator.register(PC_Items.C_POWDER, item("powder"));
+        itemModelGenerator.register(PC_Items.N_TANK, item("gas_tank"));
+        itemModelGenerator.register(PC_Items.O_TANK, item("gas_tank"));
+        itemModelGenerator.register(PC_Items.F_TANK, item("gas_tank"));
+        itemModelGenerator.register(PC_Items.NE_TANK, item("gas_tank"));
     }
 
     public static Model item(String parent) {
