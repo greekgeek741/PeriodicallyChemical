@@ -35,7 +35,7 @@ public class PC_Items {
     public static final Item O_AMPULE = register(new ElementItem(new Item.Settings(),
             "O", ChemGroup.NONMETAL, 0xffffffff), "o_ampule");
     public static final Item F_AMPULE = register(new ElementItem(new Item.Settings(),
-            "F", ChemGroup.HALOGEN, 0xffdcffcc), "f_ampule");
+            "F", ChemGroup.HALOGEN, 0xfff9ffdd), "f_ampule");
     public static final Item NE_AMPULE = register(new ElementItem(new Item.Settings(),
             "Ne", ChemGroup.NOBLE_GAS, 0xffffffff), "ne_ampule");
 
@@ -57,7 +57,7 @@ public class PC_Items {
     public static final Item O_TANK = register(new ElementItem(new Item.Settings(),
             "O", ChemGroup.NONMETAL, 0xffffffff), "o_tank");
     public static final Item F_TANK = register(new ElementItem(new Item.Settings(),
-            "F", ChemGroup.HALOGEN, 0xffdcffcc), "f_tank");
+            "F", ChemGroup.HALOGEN, 0xfff9ffdd), "f_tank");
     public static final Item NE_TANK = register(new ElementItem(new Item.Settings(),
             "Ne", ChemGroup.NOBLE_GAS, 0xffffffff), "ne_tank");
 
