@@ -2,6 +2,8 @@
   "itemgroup.chemistry_tools": "Chemistry Tools",
   "itemgroup.elements": "Chemical Elements",
 
+  "screen.periodically_chemical.lab_table": "Lab Table",
+
   "chemgroup.nonmetal": "Non-Metals",
   "chemgroup.noble_gas": "Noble Gasses",
   "chemgroup.alkali": "Alkali Metals",
