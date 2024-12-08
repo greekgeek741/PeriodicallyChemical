@@ -1,6 +1,5 @@
 package net.c4fey.perichem.screen;
 
-
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.c4fey.perichem.PeriodicallyChemical;
 import net.minecraft.client.gui.DrawContext;
@@ -11,8 +10,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class LabScreen extends HandledScreen<LabScreenHandler> {
-
-    public static final Identifier TEXTURE = Identifier.of(PeriodicallyChemical.MOD_ID,
+    private static final Identifier TEXTURE = Identifier.of(PeriodicallyChemical.MOD_ID,
             "textures/gui/lab_screen.png");
 
     public LabScreen(LabScreenHandler handler, PlayerInventory inventory, Text title) {
@@ -26,6 +24,7 @@ public class LabScreen extends HandledScreen<LabScreenHandler> {
         RenderSystem.setShaderTexture(0, TEXTURE);
         int x = (width - backgroundWidth) / 2;
         int y = (height - backgroundHeight) / 2;
+
         context.drawTexture(TEXTURE, x, y, 0, 0, backgroundWidth, backgroundHeight);
     }
 

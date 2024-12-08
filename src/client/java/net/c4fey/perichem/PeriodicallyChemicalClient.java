@@ -11,7 +11,9 @@ import net.minecraft.client.gui.screen.ingame.HandledScreens;
 public class PeriodicallyChemicalClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
+
 		HandledScreens.register(PC_ScreenHandlers.LAB_SCREEN_HANDLER, LabScreen::new);
+
 		ColorProviderRegistry.ITEM.register(
 				(stack, tintIndex) -> {
                     return ((ElementItem) stack.getItem()).getContentColor(tintIndex);

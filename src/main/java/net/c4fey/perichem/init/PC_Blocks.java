@@ -14,8 +14,7 @@ import net.minecraft.util.Identifier;
 public class PC_Blocks {
 
     public static final Block LAB_TABLE = register("lab_table", new LabTableBlock(
-            AbstractBlock.Settings.create().strength(2f).sounds(BlockSoundGroup.ANVIL).solid()
-    ));
+            AbstractBlock.Settings.create().solid().strength(0f).sounds(BlockSoundGroup.ANVIL)));
 
     private static Block register(String name, Block block) {
         Registry.register(Registries.ITEM, Identifier.of(PeriodicallyChemical.MOD_ID, name),

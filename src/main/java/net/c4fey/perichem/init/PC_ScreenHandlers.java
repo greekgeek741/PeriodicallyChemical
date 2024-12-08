@@ -13,6 +13,7 @@ public class PC_ScreenHandlers {
             Registry.register(Registries.SCREEN_HANDLER,
                     Identifier.of(PeriodicallyChemical.MOD_ID, "lab"),
                     new ScreenHandlerType<>(LabScreenHandler::new, FeatureSet.empty()));
+
     public static void initialize() {
         PeriodicallyChemical.LOGGER.info("Screen Handlers registered!");
     }
