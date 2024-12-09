@@ -1,7 +1,6 @@
 package net.c4fey.perichem.screen;
 
 import net.c4fey.perichem.init.PC_ScreenHandlers;
-import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
@@ -9,6 +8,7 @@ import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
+import net.minecraft.text.Text;
 
 public class LabScreenHandler extends ScreenHandler {
     private final Inventory inventory;
@@ -79,5 +79,15 @@ public class LabScreenHandler extends ScreenHandler {
     @Override
     public boolean canUse(PlayerEntity player) {
         return this.inventory.canPlayerUse(player);
+    }
+
+    @Override
+    public boolean onButtonClick(PlayerEntity player, int id) {
+        if (player.getWorld().isClient){
+            player.sendMessage(Text.of("Client registered button click of id " + id));
+        } else {
+            player.sendMessage(Text.of("Server registered button click of id " + id));
+        }
+        return super.onButtonClick(player, id);
     }
 }
