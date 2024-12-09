@@ -34,6 +34,12 @@
   "element.periodically_chemical.ne": "Neon",
   "element.periodically_chemical.na": "Sodium",
   "element.periodically_chemical.mg": "Magnesium",
+  "element.periodically_chemical.al": "Aluminum",
+  "element.periodically_chemical.si": "Silicon",
+  "element.periodically_chemical.p": "Phosphorus",
+  "element.periodically_chemical.s": "Sulfur",
+  "element.periodically_chemical.cl": "Chlorine",
+  "element.periodically_chemical.ar": "Argon",
 
   "itemtype.periodically_chemical.ampule": "Ampule",
   "itemtype.periodically_chemical.vial": "Vial",

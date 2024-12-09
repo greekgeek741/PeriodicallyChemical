@@ -46,9 +46,9 @@ public class ChemElement {
         elements.add(new ChemElement("He", ChemGroup.NOBLE_GAS,
                 0xffffffff, 2, false));
         elements.add(new ChemElement("Li", ChemGroup.ALKALI,
-                0xffdadada, 0, true));
+                0xffc9c9c9, 0, true));
         elements.add(new ChemElement("Be", ChemGroup.ALKALINE_EARTH,
-                0xff434448, 0, true));
+                0xff545559, 0, true));
         elements.add(new ChemElement("B", ChemGroup.SEMIMETAL,
                 0xff555143, 0, false));
         elements.add(new ChemElement("C", ChemGroup.NONMETAL,
@@ -58,13 +58,25 @@ public class ChemElement {
         elements.add(new ChemElement("O", ChemGroup.NONMETAL,
                 0xffffffff, 2, false));
         elements.add(new ChemElement("F", ChemGroup.HALOGEN,
-                0xfff9ffdd, 2, false));
+                0xfff7ff00, 2, false));
         elements.add(new ChemElement("Ne", ChemGroup.NOBLE_GAS,
                 0xffffffff, 2, false));
         elements.add(new ChemElement("Na", ChemGroup.ALKALI,
-                0xffdadada, 0, true));
+                0xffb8b8b8, 0, true));
         elements.add(new ChemElement("Mg", ChemGroup.ALKALINE_EARTH,
-                0xff434448, 0, true));
+                0xff65666a, 0, true));
+        elements.add(new ChemElement("Al", ChemGroup.POST_TRANSITION,
+                0xffdadada, 0, true));
+        elements.add(new ChemElement("Si", ChemGroup.SEMIMETAL,
+                0xff295261, 0, false));
+        elements.add(new ChemElement("P", ChemGroup.NONMETAL,
+                0xfffffa6f, 0, false));
+        elements.add(new ChemElement("S", ChemGroup.NONMETAL,
+                0xfff5fb1d, 0, false));
+        elements.add(new ChemElement("Cl", ChemGroup.HALOGEN,
+                0xff05ff00, 2, false));
+        elements.add(new ChemElement("Ar", ChemGroup.NOBLE_GAS,
+                0xffffffff, 2, false));
 
         return elements;
     }
