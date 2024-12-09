@@ -40,6 +40,9 @@ public class PC_ModelGenerator extends FabricModelProvider {
             };
             itemModelGenerator.register(item, item(parent));
         }
+        for (ElementItem item : PC_Items.METAL_ELEMENT_INGOTS) {
+            itemModelGenerator.register(item, item("ingot"));
+        }
     }
 
     public static Model item(String parent) {

@@ -39,5 +39,6 @@
   "itemtype.periodically_chemical.vial": "Vial",
   "itemtype.periodically_chemical.tank": "Tank",
   "itemtype.periodically_chemical.jug": "Jug",
-  "itemtype.periodically_chemical.powder": "Powder"
+  "itemtype.periodically_chemical.powder": "Powder",
+  "itemtype.periodically_chemical.ingot": "Ingot"
 }

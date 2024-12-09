@@ -22,6 +22,7 @@ public class PC_Items {
 
     public static final ArrayList<ElementItem> BASIC_ELEMENT_UNITS = new ArrayList<>();
     public static final ArrayList<ElementItem> X8_STORAGE_ELEMENT_UNITS = new ArrayList<>();
+    public static final ArrayList<ElementItem> METAL_ELEMENT_INGOTS = new ArrayList<>();
 
     private static Item register(Item item, String id) {
         return Registry.register(Registries.ITEM, Identifier.of(PeriodicallyChemical.MOD_ID, id), item);
@@ -43,6 +44,12 @@ public class PC_Items {
             X8_STORAGE_ELEMENT_UNITS.add((ElementItem) register(new ElementItem(
                     new Item.Settings(), element, x8ItemType),
                     element.getSymbol().toLowerCase() + "_" + x8ItemType));
+
+            if (element.hasMetalItems()) {
+                METAL_ELEMENT_INGOTS.add((ElementItem) register(new ElementItem(
+                        new Item.Settings(), element, "ingot"),
+                        element.getSymbol().toLowerCase() + "_ingot"));
+            }
         }
 
         PeriodicallyChemical.LOGGER.info("Items Registered!");

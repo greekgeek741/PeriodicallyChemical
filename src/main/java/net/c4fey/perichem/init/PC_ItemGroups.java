@@ -42,6 +42,9 @@ public class PC_ItemGroups {
             for (ElementItem item : PC_Items.X8_STORAGE_ELEMENT_UNITS) {
                 itemGroup.add(item);
             }
+            for (ElementItem item : PC_Items.METAL_ELEMENT_INGOTS) {
+                itemGroup.add(item);
+            }
         });
         PeriodicallyChemical.LOGGER.info("Item Groups Registered!");
     }

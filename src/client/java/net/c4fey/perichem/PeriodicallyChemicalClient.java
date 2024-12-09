@@ -19,17 +19,19 @@ public class PeriodicallyChemicalClient implements ClientModInitializer {
 	private void registerColorProviders() {
 		for (ElementItem item : PC_Items.BASIC_ELEMENT_UNITS) {
 			ColorProviderRegistry.ITEM.register(
-					(stack, tintIndex) -> {
-						return ((ElementItem) stack.getItem()).getContentColor(tintIndex);
-					},
+					(stack, tintIndex) -> ((ElementItem) stack.getItem()).getContentColor(tintIndex),
 					item
 			);
 		}
 		for (ElementItem item : PC_Items.X8_STORAGE_ELEMENT_UNITS) {
 			ColorProviderRegistry.ITEM.register(
-					(stack, tintIndex) -> {
-						return ((ElementItem) stack.getItem()).getContentColor(tintIndex);
-					},
+					(stack, tintIndex) -> ((ElementItem) stack.getItem()).getContentColor(tintIndex),
+					item
+			);
+		}
+		for (ElementItem item : PC_Items.METAL_ELEMENT_INGOTS) {
+			ColorProviderRegistry.ITEM.register(
+					(stack, tintIndex) -> ((ElementItem) stack.getItem()).getContentColor(tintIndex),
 					item
 			);
 		}
