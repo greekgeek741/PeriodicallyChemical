@@ -37,9 +37,9 @@ public class PC_Items {
                     element.getSymbol().toLowerCase() + "_" + basicItemType));
 
             String x8ItemType = switch (element.getStorageType()) {
-                case 0 -> "tank";
+                case 0 -> "powder";
                 case 1 -> "jug";
-                default -> "powder";
+                default -> "tank";
             };
             X8_STORAGE_ELEMENT_UNITS.add((ElementItem) register(new ElementItem(
                     new Item.Settings(), element, x8ItemType),

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "group": "powder_to_ingot",
+  "ingredient": {
+    "item": "periodically_chemical:mg_powder"
+  },
+  "result": {
+    "id": "periodically_chemical:mg_ingot"
+  }
+}
