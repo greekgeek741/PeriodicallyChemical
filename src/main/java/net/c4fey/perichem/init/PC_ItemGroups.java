@@ -1,6 +1,7 @@
 package net.c4fey.perichem.init;
 
 import net.c4fey.perichem.PeriodicallyChemical;
+import net.c4fey.perichem.item.ElementItem;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemGroup;
@@ -20,7 +21,7 @@ public class PC_ItemGroups {
     public static final RegistryKey<ItemGroup> ELEMENTS_GROUP_KEY = RegistryKey.of(
             Registries.ITEM_GROUP.getKey(), Identifier.of(PeriodicallyChemical.MOD_ID, "elements_group"));
     public static final ItemGroup ELEMENTS_GROUP = FabricItemGroup.builder()
-            .icon(() -> new ItemStack(PC_Items.H_AMPULE))
+            .icon(() -> new ItemStack(PC_Items.BASIC_ELEMENT_UNITS.getFirst()))
             .displayName(Text.translatable("itemgroup.elements")).build();
 
     public static void initialize() {
@@ -35,35 +36,12 @@ public class PC_ItemGroups {
         });
         Registry.register(Registries.ITEM_GROUP, ELEMENTS_GROUP_KEY, ELEMENTS_GROUP);
         ItemGroupEvents.modifyEntriesEvent(ELEMENTS_GROUP_KEY).register(itemGroup -> {
-            itemGroup.add(PC_Items.H_AMPULE);
-            itemGroup.add(PC_Items.H_TANK);
-
-            itemGroup.add(PC_Items.HE_AMPULE);
-            itemGroup.add(PC_Items.HE_TANK);
-
-            itemGroup.add(PC_Items.LI_VIAL);
-            itemGroup.add(PC_Items.LI_POWDER);
-
-            itemGroup.add(PC_Items.BE_VIAL);
-            itemGroup.add(PC_Items.BE_POWDER);
-
-            itemGroup.add(PC_Items.B_VIAL);
-            itemGroup.add(PC_Items.B_POWDER);
-
-            itemGroup.add(PC_Items.C_VIAL);
-            itemGroup.add(PC_Items.C_POWDER);
-
-            itemGroup.add(PC_Items.N_AMPULE);
-            itemGroup.add(PC_Items.N_TANK);
-
-            itemGroup.add(PC_Items.O_AMPULE);
-            itemGroup.add(PC_Items.O_TANK);
-
-            itemGroup.add(PC_Items.F_AMPULE);
-            itemGroup.add(PC_Items.F_TANK);
-
-            itemGroup.add(PC_Items.NE_AMPULE);
-            itemGroup.add(PC_Items.NE_TANK);
+            for (ElementItem item : PC_Items.BASIC_ELEMENT_UNITS) {
+                itemGroup.add(item);
+            }
+            for (ElementItem item : PC_Items.X8_STORAGE_ELEMENT_UNITS) {
+                itemGroup.add(item);
+            }
         });
         PeriodicallyChemical.LOGGER.info("Item Groups Registered!");
     }

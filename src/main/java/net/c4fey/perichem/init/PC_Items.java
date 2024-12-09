@@ -2,11 +2,14 @@ package net.c4fey.perichem.init;
 
 import net.c4fey.perichem.PeriodicallyChemical;
 import net.c4fey.perichem.item.ElementItem;
+import net.c4fey.perichem.util.ChemElement;
 import net.c4fey.perichem.util.ChemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+
+import java.util.ArrayList;
 
 public class PC_Items {
 
@@ -17,55 +20,31 @@ public class PC_Items {
     public static final Item GLASS_TANK = register(new Item(new Item.Settings()), "glass_tank");
     public static final Item GLASS_JUG = register(new Item(new Item.Settings()), "glass_jug");
 
-    // BASIC ELEMENTS
-    public static final Item H_AMPULE = register(new ElementItem(new Item.Settings(),
-            "H", ChemGroup.NONMETAL, 0xffffffff), "h_ampule");
-    public static final Item HE_AMPULE = register(new ElementItem(new Item.Settings(),
-            "He", ChemGroup.NOBLE_GAS, 0xffffffff), "he_ampule");
-    public static final Item LI_VIAL = register(new ElementItem(new Item.Settings(),
-            "Li", ChemGroup.ALKALI, 0xffdadada), "li_vial");
-    public static final Item BE_VIAL = register(new ElementItem(new Item.Settings(),
-            "Be", ChemGroup.ALKALINE_EARTH, 0xff434448), "be_vial");
-    public static final Item B_VIAL = register(new ElementItem(new Item.Settings(),
-            "B", ChemGroup.SEMIMETAL, 0xff555143), "b_vial");
-    public static final Item C_VIAL = register(new ElementItem(new Item.Settings(),
-            "C", ChemGroup.NONMETAL, 0xff000000), "c_vial");
-    public static final Item N_AMPULE = register(new ElementItem(new Item.Settings(),
-            "N", ChemGroup.NONMETAL, 0xffffffff), "n_ampule");
-    public static final Item O_AMPULE = register(new ElementItem(new Item.Settings(),
-            "O", ChemGroup.NONMETAL, 0xffffffff), "o_ampule");
-    public static final Item F_AMPULE = register(new ElementItem(new Item.Settings(),
-            "F", ChemGroup.HALOGEN, 0xfff9ffdd), "f_ampule");
-    public static final Item NE_AMPULE = register(new ElementItem(new Item.Settings(),
-            "Ne", ChemGroup.NOBLE_GAS, 0xffffffff), "ne_ampule");
-
-    // TANKS/JUGS/POWDER
-    public static final Item H_TANK = register(new ElementItem(new Item.Settings(),
-            "H", ChemGroup.NONMETAL, 0xffffffff), "h_tank");
-    public static final Item HE_TANK = register(new ElementItem(new Item.Settings(),
-            "He", ChemGroup.NOBLE_GAS, 0xffffffff), "he_tank");
-    public static final Item LI_POWDER = register(new ElementItem(new Item.Settings(),
-            "Li", ChemGroup.ALKALI, 0xffdadada), "li_powder");
-    public static final Item BE_POWDER = register(new ElementItem(new Item.Settings(),
-            "Be", ChemGroup.ALKALINE_EARTH, 0xff434448), "be_powder");
-    public static final Item B_POWDER = register(new ElementItem(new Item.Settings(),
-            "B", ChemGroup.SEMIMETAL, 0xff555143), "b_powder");
-    public static final Item C_POWDER = register(new ElementItem(new Item.Settings(),
-            "C", ChemGroup.NONMETAL, 0xff000000), "c_powder");
-    public static final Item N_TANK = register(new ElementItem(new Item.Settings(),
-            "N", ChemGroup.NONMETAL, 0xffffffff), "n_tank");
-    public static final Item O_TANK = register(new ElementItem(new Item.Settings(),
-            "O", ChemGroup.NONMETAL, 0xffffffff), "o_tank");
-    public static final Item F_TANK = register(new ElementItem(new Item.Settings(),
-            "F", ChemGroup.HALOGEN, 0xfff9ffdd), "f_tank");
-    public static final Item NE_TANK = register(new ElementItem(new Item.Settings(),
-            "Ne", ChemGroup.NOBLE_GAS, 0xffffffff), "ne_tank");
+    public static final ArrayList<ElementItem> BASIC_ELEMENT_UNITS = new ArrayList<>();
+    public static final ArrayList<ElementItem> X8_STORAGE_ELEMENT_UNITS = new ArrayList<>();
 
     private static Item register(Item item, String id) {
         return Registry.register(Registries.ITEM, Identifier.of(PeriodicallyChemical.MOD_ID, id), item);
     }
 
     public static void initialize() {
+        for (ChemElement element : ChemElement.getChemElements()) {
+
+            String basicItemType = element.getStorageType() == 0 ? "vial" : "ampule";
+            BASIC_ELEMENT_UNITS.add((ElementItem) register(new ElementItem(
+                    new Item.Settings(), element, basicItemType),
+                    element.getSymbol().toLowerCase() + "_" + basicItemType));
+
+            String x8ItemType = switch (element.getStorageType()) {
+                case 0 -> "tank";
+                case 1 -> "jug";
+                default -> "powder";
+            };
+            X8_STORAGE_ELEMENT_UNITS.add((ElementItem) register(new ElementItem(
+                    new Item.Settings(), element, x8ItemType),
+                    element.getSymbol().toLowerCase() + "_" + x8ItemType));
+        }
+
         PeriodicallyChemical.LOGGER.info("Items Registered!");
     }
 }
