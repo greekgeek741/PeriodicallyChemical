@@ -2,17 +2,16 @@ package net.c4fey.perichem.screen;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.c4fey.perichem.PeriodicallyChemical;
+import net.c4fey.perichem.network.LabButtonPayload;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.screen.slot.Slot;
-import net.minecraft.screen.slot.SlotActionType;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-
-import java.util.Objects;
+import net.minecraft.util.math.BlockPos;
 
 public class LabScreen extends HandledScreen<LabScreenHandler> {
     private static final Identifier TEXTURE = Identifier.of(PeriodicallyChemical.MOD_ID,
@@ -30,17 +29,11 @@ public class LabScreen extends HandledScreen<LabScreenHandler> {
         int y = (height - backgroundHeight) / 2;
 
         this.addDrawableChild(new ButtonWidget.Builder(Text.of(">"),
-                (button) -> {
-                    assert this.client != null;
-                    assert this.client.player != null;
-                    this.getScreenHandler().onButtonClick(this.client.player, 0);
-                }).dimensions(x + 80, y + 25, 16, 16).build());
+                (button) -> ClientPlayNetworking.send(new LabButtonPayload(0)))
+                .dimensions(x + 80, y + 25, 16, 16).build());
         this.addDrawableChild(new ButtonWidget.Builder(Text.of(">>"),
-                (button) -> {
-                    assert this.client != null;
-                    assert this.client.player != null;
-                    this.getScreenHandler().onButtonClick(this.client.player, 1);
-                }).dimensions(x + 80, y + 45, 16, 16).build());
+                (button) -> ClientPlayNetworking.send(new LabButtonPayload(1)))
+                .dimensions(x + 80, y + 45, 16, 16).build());
     }
 
     @Override

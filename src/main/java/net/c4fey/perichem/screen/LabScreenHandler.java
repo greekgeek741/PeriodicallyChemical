@@ -81,12 +81,18 @@ public class LabScreenHandler extends ScreenHandler {
         return this.inventory.canPlayerUse(player);
     }
 
+    private boolean attemptCraft() {
+        return false;
+    }
+
     @Override
     public boolean onButtonClick(PlayerEntity player, int id) {
-        if (player.getWorld().isClient){
-            player.sendMessage(Text.of("Client registered button click of id " + id));
-        } else {
-            player.sendMessage(Text.of("Server registered button click of id " + id));
+        if (!player.getWorld().isClient){
+            boolean going;
+            do {
+                going = this.attemptCraft() && id == 1;
+            } while (going);
+            player.sendMessage(Text.of("lab button"));
         }
         return super.onButtonClick(player, id);
     }
