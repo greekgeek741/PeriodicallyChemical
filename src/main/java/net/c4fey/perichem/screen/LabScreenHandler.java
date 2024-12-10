@@ -11,7 +11,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
-import net.minecraft.text.Text;
 
 import java.util.ArrayList;
 
@@ -116,17 +115,27 @@ public class LabScreenHandler extends ScreenHandler {
 
     private void applyOutput(ArrayList<ItemStack> output ) {
         for (ItemStack stack : output) {
+            boolean stackDone = false;
             for (int i = 12; i < 24; i++) {
-                if (this.inventory.getStack(i).isOf(stack.getItem()) &&
-                    this.inventory.getStack(i).getMaxCount() - this.inventory.getStack(i).getCount()
-                    >= stack.getCount()) {
-                    this.inventory.getStack(i).setCount(stack.getCount());
-                    break;
+                if (this.inventory.getStack(i).isOf(stack.getItem())) {
+                    while (this.inventory.getStack(i).getCount() <
+                            this.inventory.getStack(i).getMaxCount()) {
+                        this.inventory.setStack(i, this.inventory.getStack(i).copyWithCount(
+                                this.inventory.getStack(i).getCount() + 1
+                        ));
+                        if (stack.getCount() == 1) {
+                            stackDone = true;
+                            break;
+                        } else {
+                            stack.setCount(stack.getCount() - 1);
+                        }
+                    }
                 }
                 if (this.inventory.getStack(i).equals(ItemStack.EMPTY)) {
                     this.inventory.setStack(i, stack);
-                    break;
+                    stackDone = true;
                 }
+                if (stackDone) break;
             }
         }
     }
@@ -148,7 +157,6 @@ public class LabScreenHandler extends ScreenHandler {
             do {
                 going = this.attemptCraft() && id == 1;
             } while (going);
-            player.sendMessage(Text.of("lab button"));
         }
         return super.onButtonClick(player, id);
     }
