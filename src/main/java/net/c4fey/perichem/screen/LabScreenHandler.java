@@ -95,7 +95,7 @@ public class LabScreenHandler extends ScreenHandler {
     }
 
     private LabRecipe getMatch(ArrayList<Item> items) {
-        for (LabRecipe recipe : PC_Recipes.LAB_TABLE) {
+        for (LabRecipe recipe : PC_Recipes.LAB_TABLE_RECIPES) {
             if (recipe.matchInputs(items)) {
                 return recipe;
             }

@@ -1,12 +1,11 @@
 package net.c4fey.perichem.recipe;
 
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import java.util.ArrayList;
 
-public record LabRecipe(Block kit, ArrayList<Item> inputs, ArrayList<ItemStack> outputs) {
+public record LabRecipe(ArrayList<Item> inputs, ArrayList<ItemStack> outputs) {
 
     public boolean matchInputs(ArrayList<Item> items) {
         boolean found = false;
