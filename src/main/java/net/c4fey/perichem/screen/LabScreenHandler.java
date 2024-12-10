@@ -1,14 +1,19 @@
 package net.c4fey.perichem.screen;
 
+import net.c4fey.perichem.init.PC_Recipes;
 import net.c4fey.perichem.init.PC_ScreenHandlers;
+import net.c4fey.perichem.recipe.LabRecipe;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SimpleInventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.text.Text;
+
+import java.util.ArrayList;
 
 public class LabScreenHandler extends ScreenHandler {
     private final Inventory inventory;
@@ -81,8 +86,59 @@ public class LabScreenHandler extends ScreenHandler {
         return this.inventory.canPlayerUse(player);
     }
 
+    private ArrayList<Item> getInputItems() {
+        ArrayList<Item> items = new ArrayList<>();
+        for (int i = 0; i < 12; i++) {
+            if (!this.inventory.getStack(i).equals(ItemStack.EMPTY))
+                    items.add(this.inventory.getStack(i).getItem());
+        }
+        return items;
+    }
+
+    private LabRecipe getMatch(ArrayList<Item> items) {
+        for (LabRecipe recipe : PC_Recipes.LAB_TABLE) {
+            if (recipe.matchInputs(items)) {
+                return recipe;
+            }
+        }
+        return null;
+    }
+
+    private boolean canTakeOutput(ArrayList<ItemStack> output) {
+        return true;
+    }
+
+    private void decreaseInputs() {
+        for (int i = 0; i < 12; i++) {
+            this.inventory.removeStack(i, 1);
+        }
+    }
+
+    private void applyOutput(ArrayList<ItemStack> output ) {
+        for (ItemStack stack : output) {
+            for (int i = 12; i < 24; i++) {
+                if (this.inventory.getStack(i).isOf(stack.getItem()) &&
+                    this.inventory.getStack(i).getMaxCount() - this.inventory.getStack(i).getCount()
+                    >= stack.getCount()) {
+                    this.inventory.getStack(i).setCount(stack.getCount());
+                    break;
+                }
+                if (this.inventory.getStack(i).equals(ItemStack.EMPTY)) {
+                    this.inventory.setStack(i, stack);
+                    break;
+                }
+            }
+        }
+    }
+
     private boolean attemptCraft() {
-        return false;
+        ArrayList<Item> items = this.getInputItems();
+        LabRecipe match = getMatch(items);
+        if (match == null) return false;
+        if (!canTakeOutput(match.outputs())) return false;
+        this.decreaseInputs();
+        this.applyOutput(match.outputs());
+        return true;
     }
 
     @Override

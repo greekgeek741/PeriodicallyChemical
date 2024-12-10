@@ -18,6 +18,7 @@ public class PeriodicallyChemical implements ModInitializer {
 		PC_BlockEntities.initialize();
 		PC_ScreenHandlers.initialize();
 		PC_Networking.initialize();
+		PC_Recipes.initialize();
 
 		LOGGER.info("Periodically Chemical has been initialised!");
 	}
