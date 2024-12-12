@@ -1,9 +1,11 @@
 package net.c4fey.perichem.init;
 
+import net.c4fey.perichem.PeriodicallyChemical;
 import net.c4fey.perichem.recipe.LabRecipe;
 import net.c4fey.perichem.util.ChemElement;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
 
@@ -29,7 +31,9 @@ public class PC_Recipes {
                     list1.add(PC_Items.GLASS_TANK);
                 }
             }
-            LAB_TABLE_RECIPES.add(new LabRecipe(list1, list2));
+            LAB_TABLE_RECIPES.add(new LabRecipe(Identifier.of(PeriodicallyChemical.MOD_ID,
+                    ChemElement.getChemElements().get(i).getSymbol().toLowerCase() +
+                    "_x8_compress"), list1, list2));
         }
         for (int i = 0; i < ChemElement.getChemElements().size(); i++) {
             ArrayList<Item> list1 = new ArrayList<>();
@@ -55,7 +59,9 @@ public class PC_Recipes {
                     list2.add(new ItemStack(PC_Items.GLASS_TANK));
                 }
             }
-            LAB_TABLE_RECIPES.add(new LabRecipe(list1, list2));
+            LAB_TABLE_RECIPES.add(new LabRecipe(Identifier.of(PeriodicallyChemical.MOD_ID,
+                    ChemElement.getChemElements().get(i).getSymbol().toLowerCase() +
+                            "_x8_decompress"), list1, list2));
         }
     }
 }

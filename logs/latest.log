@@ -1,5 +1,6 @@
-[16:48:22] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21 with Fabric Loader 0.16.9
-[16:48:22] [main/INFO] (FabricLoader) Loading 55 mods:
+[21:31:52] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21 with Fabric Loader 0.16.9
+[21:31:52] [main/INFO] (FabricLoader) Loading 56 mods:
+	- emi 1.1.12+1.21+fabric
 	- fabric-api 0.102.0+1.21
 	- fabric-api-base 0.4.42+6573ed8cd1
 	- fabric-api-lookup-api-v1 1.6.68+b5597344d1
@@ -55,25 +56,26 @@
 	- minecraft 1.21
 	- mixinextras 0.4.1
 	- periodically_chemical 1.0.0
-[16:48:22] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/kelly/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
-[16:48:23] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[16:48:23] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
-[16:48:23] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
-[16:48:24] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
-[16:48:25] [Datafixer Bootstrap/INFO] (Minecraft) 226 Datafixer optimizations took 418 milliseconds
-[16:48:32] [Render thread/INFO] (Minecraft) Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[16:48:32] [Render thread/INFO] (Minecraft) Setting user: Player919
-[16:48:32] [Render thread/INFO] (periodically_chemical) Items Registered!
-[16:48:32] [Render thread/INFO] (periodically_chemical) Item Groups Registered!
-[16:48:32] [Render thread/INFO] (periodically_chemical) Blocks Registered!
-[16:48:32] [Render thread/INFO] (periodically_chemical) Block Entity Types registered!
-[16:48:32] [Render thread/INFO] (periodically_chemical) Screen Handlers registered!
-[16:48:32] [Render thread/INFO] (periodically_chemical) Periodically Chemical has been initialised!
-[16:48:33] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
-[16:48:33] [Render thread/INFO] (FabricDataGenHelper) Running data generator for periodically_chemical
-[16:48:33] [Render thread/INFO] (Minecraft) Starting provider: Periodically Chemical/Model Definitions
-[16:48:34] [Render thread/INFO] (Minecraft) Periodically Chemical/Model Definitions finished after 67 ms
-[16:48:34] [Render thread/INFO] (Minecraft) Starting provider: Periodically Chemical/Recipes
-[16:48:34] [Render thread/INFO] (Minecraft) Periodically Chemical/Recipes finished after 379 ms
-[16:48:34] [Render thread/INFO] (Minecraft) All providers took: 449 ms
-[16:48:34] [Render thread/INFO] (Minecraft) Caching: total files: 61, old count: 44, new count: 62, removed stale: 0, written: 17
+[21:31:53] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/kelly/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.4+mixin.0.8.7/6a12aacc794f1078458433116e9ed42c1cc98096/sponge-mixin-0.15.4+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[21:31:53] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[21:31:53] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[21:31:53] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_21
+[21:31:53] [main/WARN] (FabricLoader/Mixin) Error loading class: mezz/jei/library/load/PluginCaller (java.lang.ClassNotFoundException: mezz/jei/library/load/PluginCaller)
+[21:31:55] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[21:31:56] [Datafixer Bootstrap/INFO] (Minecraft) 226 Datafixer optimizations took 498 milliseconds
+[21:32:04] [Render thread/INFO] (Minecraft) Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[21:32:04] [Render thread/INFO] (Minecraft) Setting user: Player314
+[21:32:04] [Render thread/INFO] (periodically_chemical) Items Registered!
+[21:32:04] [Render thread/INFO] (periodically_chemical) Item Groups Registered!
+[21:32:04] [Render thread/INFO] (periodically_chemical) Blocks Registered!
+[21:32:04] [Render thread/INFO] (periodically_chemical) Block Entity Types registered!
+[21:32:04] [Render thread/INFO] (periodically_chemical) Screen Handlers registered!
+[21:32:04] [Render thread/INFO] (periodically_chemical) Periodically Chemical has been initialised!
+[21:32:04] [Render thread/INFO] (Indigo) [Indigo] Registering Indigo renderer!
+[21:32:05] [Render thread/INFO] (FabricDataGenHelper) Running data generator for periodically_chemical
+[21:32:05] [Render thread/INFO] (Minecraft) Starting provider: Periodically Chemical/Model Definitions
+[21:32:05] [Render thread/INFO] (Minecraft) Periodically Chemical/Model Definitions finished after 67 ms
+[21:32:05] [Render thread/INFO] (Minecraft) Starting provider: Periodically Chemical/Recipes
+[21:32:05] [Render thread/INFO] (Minecraft) Periodically Chemical/Recipes finished after 342 ms
+[21:32:05] [Render thread/INFO] (Minecraft) All providers took: 411 ms
+[21:32:05] [Render thread/INFO] (Minecraft) Caching: total files: 61, old count: 61, new count: 62, removed stale: 0, written: 0
